@@ -13,7 +13,14 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: 'Mi PWA',
-  description: 'Aplicación diseñada para dispositivos móviles',
+  description: 'Aplicación web progresiva simple hecha',
+  generator : "Next.js" , 
+  manifest : "/manifest.json" ,
+  keywords : [ "nextjs" , "next14" , "pwa" , "next-pwa" ],
+  icons : [ 
+    { rel : "android-touch-icon" , url : "/icons/icon-192x192.png" }, 
+    { rel : "icon" , url : "/icons/icon-512x512.png" }, 
+  ], 
 };
 
 export default function RootLayout({ children }) {
