@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useRouter } from "next/router";
 import axiosClient from '@/services/AxiosClient';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const RegisterForm = () => {
     try {
       const response = await axiosClient.post('/api/auth/register', formData);
       alert('Registration successful!');
+      router.push('/login');
     } catch (err) {
       alert(err.response?.data?.message || 'Error registering');
     }
