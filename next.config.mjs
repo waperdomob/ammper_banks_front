@@ -11,8 +11,8 @@ const nextConfig = {
 };
 export  default  withPWA ({ 
     dest : "public" ,          // directorio de destino para los archivos PWA 
-    deshabilitar : process. env . NODE_ENV === "development" ,         // deshabilitar PWA en el entorno de desarrollo 
+    disable : process. env . NODE_ENV === "development" ,         // deshabilitar PWA en el entorno de desarrollo 
     register : true ,          // registra el service worker de PWA 
     skipWaiting : true ,       // omite la espera para la activación del service worker
- })(nextConfig);
+})(nextConfig);
 
